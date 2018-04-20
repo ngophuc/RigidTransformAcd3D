@@ -9,21 +9,6 @@
 #include "Boundingbox.h"
 
 namespace po=boost::program_options;
-using namespace std;
-
-#ifdef WITH_VISU3D_QGLVIEWER
-#include "DGtal/io/DrawWithDisplay3DModifier.h"
-#endif
-
-#define WRITE_TRANSF_FILE 0
-#define SHOW_POINTS 0
-#define SHOW_CONVEXHULL 0
-#define SHOW_CONVEXPOINT 1
-
-#define SHOW_TRANSF_CONVEXHULL 0
-#define SHOW_TRANSF_CONVEXPOINT 0
-
-#define SHOW_TRANSF_POINT 0
 
 using namespace mySpace;
 using namespace std;
