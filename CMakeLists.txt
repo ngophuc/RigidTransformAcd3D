@@ -45,7 +45,7 @@ if ( Boost_FOUND )
 endif( Boost_FOUND)
 
 add_definitions(-g)
-add_definitions(-DWITH_VISU3D_QGLVIEWER -DWITH_QT5)
+#add_definitions(-DWITH_VISU3D_QGLVIEWER -DWITH_QT5)
 
 add_executable(decomposeShapeAcd3d acd3d_main.cpp oclHelper.cpp oclHelper.h ${SOURCES})
 target_link_libraries(decomposeShapeAcd3d)
