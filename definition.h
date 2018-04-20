@@ -31,7 +31,7 @@ typedef DGtal::Viewer3D<> MyViewer;
 #include <CGAL/point_generators_3.h>
 #include <CGAL/Delaunay_triangulation_3.h>
 #include <CGAL/Polyhedron_3.h>
-#include <CGAL/convex_hull_3_to_polyhedron_3.h>
+//#include <CGAL/convex_hull_3_to_polyhedron_3.h>
 #include <CGAL/algorithm.h>
 #include <CGAL/convex_hull_3.h>
 #include <vector>
