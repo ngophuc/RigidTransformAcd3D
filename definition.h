@@ -1,9 +1,6 @@
 #ifndef DEFINITION_H
 #define DEFINITION_H
 
-#include "DGtal/io/viewers/Viewer3D.h"
-typedef DGtal::Viewer3D<> MyViewer;
-
 #include <numeric>
 #include <algorithm>
 #include <list>
@@ -16,10 +13,6 @@ typedef DGtal::Viewer3D<> MyViewer;
 #include <stdlib.h>
 #include <getopt.h>
 
-//#include "cv.h"
-//#include "highgui.h"
-
-//#include "DGtal/base/Common.h"
 #include "DGtal/geometry/curves/ArithmeticalDSS.h"
 #include "DGtal/geometry/curves/FreemanChain.h"
 #include "DGtal/base/BasicTypes.h"
@@ -31,7 +24,6 @@ typedef DGtal::Viewer3D<> MyViewer;
 #include <CGAL/point_generators_3.h>
 #include <CGAL/Delaunay_triangulation_3.h>
 #include <CGAL/Polyhedron_3.h>
-//#include <CGAL/convex_hull_3_to_polyhedron_3.h>
 #include <CGAL/algorithm.h>
 #include <CGAL/convex_hull_3.h>
 #include <vector>
