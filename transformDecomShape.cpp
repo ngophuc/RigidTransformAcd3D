@@ -152,9 +152,11 @@ int main(int argc, char** argv)
     //Convert sdp to vol: ./sdp2vol -i *.sdp -o *.vol -d maxX maxY maxZ minX minY minZ
     sprintf(filename,"%s_shape",outfile.c_str());
     sprintf(instruction,"%ssdp2vol -i %s.sdp -o %s.vol -d %d %d %d 0 0 0",dir.c_str(),filename,filename,pmax[0],pmax[1],pmax[2]);
+    cout<<"instruction: "<<instruction<<endl;
     system(instruction);
     //Convert vol to obj: ./vol2obj -i *.vol -o *.obj -m 1
     sprintf(instruction,"%svol2obj -i %s.vol -o %s.obj -m 1",dir.c_str(),filename,filename);
+    cout<<"instruction: "<<instruction<<endl;
     system(instruction);
     /******* Write to sdp then obj file ******/
 
@@ -226,10 +228,12 @@ int main(int argc, char** argv)
     //Convert sdp to vol: ./sdp2vol -i *.sdp -o *.vol -d maxX maxY maxZ minX minY minZ
     sprintf(filename,"%s_tshape",outfile.c_str());
     sprintf(instruction,"%ssdp2vol -i %s.sdp -o %s.vol -d %d %d %d 0 0 0",dir.c_str(),filename,filename,pmax[0],pmax[1],pmax[2]);
+    cout<<"instruction: "<<instruction<<endl;
     system(instruction);
     //Convert vol to obj: ./vol2obj -i *.vol -o *.obj -m 1
     //sprintf(instruction,"%svol2obj -i %s.vol -o %s.obj -m 1",dir.c_str(),filename,filename);
     sprintf(instruction,"%svol2obj -i %s.vol -o %s -m 1",dir.c_str(),filename,outputFile.c_str());
+    cout<<"instruction: "<<instruction<<endl;
     system(instruction);
     /******* Write to sdp then obj file ******/
 }

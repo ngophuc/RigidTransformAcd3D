@@ -50,5 +50,5 @@ add_definitions(-g)
 add_executable(decomposeShapeAcd3d acd3d_main.cpp oclHelper.cpp oclHelper.h ${SOURCES})
 target_link_libraries(decomposeShapeAcd3d)
 
-add_executable(transformDecomShape transformDecomShape.cpp Halfplane.cpp Halfplane.h Boundingbox.cpp Boundingbox.h Utility.cpp Utility.h)
-target_link_libraries(transformDecomShape ${DGTAL_LIBRARIES} ${DGtalToolsLibDependencies} ${CGAL_LIBRARIES} ${CGAL_3RD_PARTY_LIBRARIES})
+add_executable(transformDecomShape3d transformDecomShape.cpp Halfplane.cpp Halfplane.h Boundingbox.cpp Boundingbox.h Utility.cpp Utility.h)
+target_link_libraries(transformDecomShape3d ${DGTAL_LIBRARIES} ${DGtalToolsLibDependencies} ${CGAL_LIBRARIES} ${CGAL_3RD_PARTY_LIBRARIES})
