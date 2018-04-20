@@ -56,35 +56,6 @@ vector<Point3D> BoundingBox::getInsidePoints() const
     return points;
 }
 
-void BoundingBox::draw(MyViewer& viewer, DGtal::Color aColor) const
-{
-    Point3D p1=pointMin;
-    Point3D p2=Point3D(pointMin[0],pointMax[1],pointMin[2]);
-    Point3D p3=Point3D(pointMax[0],pointMax[1],pointMin[2]);
-    Point3D p4=Point3D(pointMax[0],pointMin[1],pointMin[2]);
-
-    Point3D p5=Point3D(pointMin[0],pointMin[1],pointMax[2]);
-    Point3D p6=Point3D(pointMin[0],pointMax[1],pointMax[2]);
-    Point3D p7=pointMax;
-    Point3D p8=Point3D(pointMax[0],pointMin[1],pointMax[2]);
-
-    viewer.setLineColor( aColor );
-    viewer.addLine(p1,p2);
-    viewer.addLine(p2,p3);
-    viewer.addLine(p3,p4);
-    viewer.addLine(p4,p1);
-
-    viewer.addLine(p5,p6);
-    viewer.addLine(p6,p7);
-    viewer.addLine(p7,p8);
-    viewer.addLine(p8,p5);
-
-    viewer.addLine(p1,p5);
-    viewer.addLine(p2,p6);
-    viewer.addLine(p3,p7);
-    viewer.addLine(p4,p8);
-}
-
 BoundingBox findBoundingBox(const vector<Point3D>& vec)
 {
     int minX=vec.at(0)[0], minY=vec.at(0)[1], minZ=vec.at(0)[2];

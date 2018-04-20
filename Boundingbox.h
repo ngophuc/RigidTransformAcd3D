@@ -28,7 +28,6 @@ class BoundingBox
 
         bool isInside(const Point3D &p) const;
         vector<Point3D> getInsidePoints() const;
-        void draw(MyViewer& display, Color aColor=Color::Red) const;
 };
 
 BoundingBox findBoundingBox(const vector<Point3D>& vec);
