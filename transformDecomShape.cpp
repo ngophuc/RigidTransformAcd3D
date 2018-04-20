@@ -243,7 +243,8 @@ int main(int argc, char** argv)
     sprintf(instruction,"%ssdp2vol -i %s.sdp -o %s.vol -d %d %d %d 0 0 0",dir.c_str(),filename,filename,pmax[0],pmax[1],pmax[2]);
     system(instruction);
     //Convert vol to obj: ./vol2obj -i *.vol -o *.obj -m 1
-    sprintf(instruction,"%svol2obj -i %s.vol -o %s.obj -m 1",dir.c_str(),filename,filename);
+    //sprintf(instruction,"%svol2obj -i %s.vol -o %s.obj -m 1",dir.c_str(),filename,filename);
+    sprintf(instruction,"%svol2obj -i %s.vol -o %s -m 1",dir.c_str(),filename,outputFile.c_str());
     system(instruction);
     /******* Write to sdp then obj file ******/
 }
