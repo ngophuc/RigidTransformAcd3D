@@ -1,4 +1,4 @@
-#include "boundingbox.h"
+#include "Boundingbox.h"
 
 BoundingBox::BoundingBox()
 {

@@ -53,21 +53,9 @@ using namespace std;
 using namespace DGtal;
 using namespace Z2i;
 
-#define OUTPUT "Result"
-//#define CONTOURSIZE 50
-#define IS_PLOT true
 #define FILENAMESIZE 200
 
 #define ERROR 1e-5
-
-#define SAVE_SVG
-//#define SAVE_EPS
-//#define SAVE_PS
-//#define SAVE_PNG
-#define SAVE_PGM
-
-//#define FILL_HP
-//#define DRAW_GRID
 
 //black
 #define BGR 0
