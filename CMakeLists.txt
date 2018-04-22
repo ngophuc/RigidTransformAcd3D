@@ -52,3 +52,6 @@ target_link_libraries(decomposeShapeAcd3d)
 
 add_executable(transformDecomShape3d transformDecomShape.cpp Halfplane.cpp Halfplane.h Boundingbox.cpp Boundingbox.h Utility.cpp Utility.h)
 target_link_libraries(transformDecomShape3d ${DGTAL_LIBRARIES} ${DGtalToolsLibDependencies} ${CGAL_LIBRARIES} ${CGAL_3RD_PARTY_LIBRARIES})
+
+#add_executable(transformDecomShape3d_gui transformDecomShape_gui.cpp Halfplane.cpp Halfplane.h Boundingbox.cpp Boundingbox.h Utility.cpp Utility.h)
+#target_link_libraries(transformDecomShape3d_gui ${DGTAL_LIBRARIES} ${DGtalToolsLibDependencies} ${CGAL_LIBRARIES} ${CGAL_3RD_PARTY_LIBRARIES})
