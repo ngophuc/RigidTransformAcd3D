@@ -11,11 +11,6 @@ cd DGtal ; mkdir buid ; cd build
 cmake ..
 make install
 
-git clone https://github.com/DGtal-team/DGtalTools.git
-cd DGtalTools ; mkdir buid ; cd build
-cmake ..
-make install
-
 
 git clone https://github.com/CGAL/cgal.git
 cd cgal ; mkdir buid ; cd build
@@ -32,6 +27,4 @@ To install the tools you have to follow the following steps:
     mkdir build; cd build
     cmake .. -DDGtal_DIR=../DGtal/build
     make -j 5
-    cp ../DGtalTools/build/converters/sdp2vol .
-    cp ../DGtalTools/build/converters/vol2obj .
     
