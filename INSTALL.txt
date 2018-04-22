@@ -1,0 +1,37 @@
+Dependancies:
+-------------
+This program is based on the DGtal and CGAL Libraries. You need to install the last version available here:
+https://github.com/DGtal-team/DGtal
+https://github.com/CGAL/cgal
+
+Note that as DGtal installation required the boost library which is also used in this programm.
+
+git clone https://github.com/DGtal-team/DGtal.git
+cd DGtal ; mkdir buid ; cd build
+cmake ..
+make install
+
+git clone https://github.com/DGtal-team/DGtalTools.git
+cd DGtalTools ; mkdir buid ; cd build
+cmake ..
+make install
+
+
+git clone https://github.com/CGAL/cgal.git
+cd cgal ; mkdir buid ; cd build
+cmake ..
+make install
+
+Main installation:
+-------------------
+
+To install the tools you have to follow the following steps:
+
+- Main tool installation:
+  From the RigidTransformAcd3D directory:
+    mkdir build; cd build
+    cmake .. -DDGtal_DIR=../DGtal/build
+    make -j 5
+    cp ../DGtalTools/build/converters/sdp2vol .
+    cp ../DGtalTools/build/converters/vol2obj .
+    
