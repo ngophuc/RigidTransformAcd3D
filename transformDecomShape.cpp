@@ -1,5 +1,6 @@
 #include <DGtal/io/readers/PointListReader.h>
 #include "DGtal/io/colormaps/HueShadeColorMap.h"
+#include "DGtal/io/boards/Board3D.h"
 
 #include <boost/program_options/options_description.hpp>
 #include <boost/program_options/parsers.hpp>
@@ -117,48 +118,32 @@ int main(int argc, char** argv)
     vecConvexShape=generateConvexShape(vecPoints,vecHP,vecVertices,vecFacets,false);
     /******* Generate convex shape ********/
 
-    /******* Write to sdp then obj file ******/
-    //Find bounding box of convex shape;
-    BoundingBox BB;
-    Point3D pmin, pmax;
-    vector<Point3D> pBB;
+    /******* Write to obj file ******/
+    HueShadeColorMap<double> hueMap(0.0,vecConvexShape.size());
+    Board3D<> board;
+    //Decomposition
     for(int id=0; id<nbFile; id++) {
-        BB=findBoundingBox(vecConvexShape.at(id));
-        pmin=BB.getPointMin();
-        pmax=BB.getPointMax();
-        pBB.push_back(pmin);
-        pBB.push_back(pmax);
+        //board.setFillColor(hueMap(id));
+        for(size_t i=0; i<vecFacets.at(id).size(); i++)
+            board.addTriangle(vecVertices.at(id).at(vecFacets.at(id)[i][0]),vecVertices.at(id).at(vecFacets.at(id)[i][1]),vecVertices.at(id).at(vecFacets.at(id)[i][2]));
     }
-    BB=findBoundingBox(pBB);
-    pmin=BB.getPointMin();
-    pmax=BB.getPointMax()-pmin;
-    sprintf(filename,"%s_shape.sdp",outfile.c_str());
-    ofstream myfile (filename);
-    if (myfile.is_open()) {
-        myfile <<"# sdp file generate from convex decomposition"<<endl;
-        myfile <<"# format: x y z"<<endl;
-        for(int id=0; id<nbFile; id++) {
-            for(size_t it=0; it<vecConvexShape.at(id).size(); it++)
-                myfile << vecConvexShape.at(id).at(it)[0]-pmin[0]
-                        <<" "<<vecConvexShape.at(id).at(it)[1]-pmin[1]
-                        <<" "<<vecConvexShape.at(id).at(it)[2]-pmin[2]<<endl;
-        }
-        myfile.close();
+    sprintf(filename,"%s_decomp.obj",outfile.c_str());
+    cout<<filename<<endl;
+    board.saveOBJ(filename);
+    board.clear();
+    //Digitization
+    board << SetMode3D("PointVector", "Both");
+    for(int id=0; id<nbFile; id++) {
+        board << CustomColors3D(hueMap(id),hueMap(id));
+        for(size_t it=0; it<vecConvexShape.at(id).size(); it++)
+            board << vecConvexShape.at(id).at(it);
     }
-    else {
-        cout << "Unable to open file"<<filename;
-        exit(-1);
-    }
-    //Convert sdp to vol: ./sdp2vol -i *.sdp -o *.vol -d maxX maxY maxZ minX minY minZ
-    sprintf(filename,"%s_shape",outfile.c_str());
-    sprintf(instruction,"%ssdp2vol -i %s.sdp -o %s.vol -d %d %d %d 0 0 0",dir.c_str(),filename,filename,pmax[0],pmax[1],pmax[2]);
-    cout<<"instruction: "<<instruction<<endl;
-    system(instruction);
-    //Convert vol to obj: ./vol2obj -i *.vol -o *.obj -m 1
-    sprintf(instruction,"%svol2obj -i %s.vol -o %s.obj -m 1",dir.c_str(),filename,filename);
-    cout<<"instruction: "<<instruction<<endl;
-    system(instruction);
-    /******* Write to sdp then obj file ******/
+    sprintf(filename,"%s_shape.obj",outfile.c_str());
+    cout<<filename<<endl;
+    board.saveOBJ(filename);
+    board.clear();
+    /******* Write to obj file ******/
+
 
     /****** Transformed convex shape ******/
     transformation3D T;
@@ -196,46 +181,18 @@ int main(int argc, char** argv)
     /****** Transformed convex shape ******/
 
     /******* Write to sdp then obj file ******/
-    //Find bounding box of convex shape;
-    vector<Point3D> tpBB;
+    board << SetMode3D("PointVector", "Both");//<< SetMode3D(domain.className(), "Paving")
     for(int id=0; id<nbFile; id++) {
-        BB=findBoundingBox(vecConvexShape.at(id));
-        pmin=BB.getPointMin();
-        pmax=BB.getPointMax();
-        tpBB.push_back(pmin);
-        tpBB.push_back(pmax);
+        board << CustomColors3D(hueMap(id),hueMap(id));
+        for(size_t it=0; it<tvecConvexShape.at(id).size(); it++)
+            board << tvecConvexShape.at(id).at(it);
     }
-    BB=findBoundingBox(tpBB);
-    pmin=BB.getPointMin();
-    pmax=BB.getPointMax()-pmin;
-    sprintf(filename,"%s_tshape.sdp",outfile.c_str());
-    myfile.open(filename);
-    if (myfile.is_open()) {
-        myfile <<"# sdp file generate from transformed convex decomposition"<<endl;
-        myfile <<"# format: x y z"<<endl;
-        for(int id=0; id<nbFile; id++) {
-            for(size_t it=0; it<tvecConvexShape.at(id).size(); it++)
-                myfile << tvecConvexShape.at(id).at(it)[0]-pmin[0]
-                        <<" "<<tvecConvexShape.at(id).at(it)[1]-pmin[1]
-                        <<" "<<tvecConvexShape.at(id).at(it)[2]-pmin[2]<<endl;
-        }
-        myfile.close();
-    }
-    else {
-        cout << "Unable to open file"<<filename;
-        exit(-1);
-    }
-    //Convert sdp to vol: ./sdp2vol -i *.sdp -o *.vol -d maxX maxY maxZ minX minY minZ
-    sprintf(filename,"%s_tshape",outfile.c_str());
-    sprintf(instruction,"%ssdp2vol -i %s.sdp -o %s.vol -d %d %d %d 0 0 0",dir.c_str(),filename,filename,pmax[0],pmax[1],pmax[2]);
-    cout<<"instruction: "<<instruction<<endl;
-    system(instruction);
-    //Convert vol to obj: ./vol2obj -i *.vol -o *.obj -m 1
-    //sprintf(instruction,"%svol2obj -i %s.vol -o %s.obj -m 1",dir.c_str(),filename,filename);
-    sprintf(instruction,"%svol2obj -i %s.vol -o %s -m 1",dir.c_str(),filename,outputFile.c_str());
-    cout<<"instruction: "<<instruction<<endl;
-    system(instruction);
+    board.saveOBJ(outputFile.c_str());
+    cout<<outputFile.c_str()<<endl;
+    board.clear();
     /******* Write to sdp then obj file ******/
+
+    return 0;
 }
 
 vector<Point3D> generateConvexShape(const vector<Point3D>& vecPoints, vector<HalfPlane>& vecHP, std::vector<Point3D> &vecVertices, std::vector<Point3D> &vecFacets, bool isVerbose)
