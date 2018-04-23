@@ -34,7 +34,7 @@ int main(int argc, char** argv)
             ("gamma,g", po::value<double>()->default_value(0.0), "rotation angle by z-axis.")
             ("sampling,s", po::value<int>()->default_value(100), "sampling data.")
             ("resolution,r", po::value<int>()->default_value(100000), "ecomposition parameter resolution.")
-            ("depth,d", po::value<int>()->default_value(20), "decomposition parameter depth.")
+            ("depth", po::value<int>()->default_value(20), "decomposition parameter depth.")
             ("minVolumePerCH,m", po::value<double>()->default_value(0.0001), "decomposition parameter minVolumePerCH.");
 
     bool parseOK=true;
