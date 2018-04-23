@@ -32,7 +32,10 @@ int main(int argc, char** argv)
             ("alpha,a", po::value<double>()->default_value(0.0), "rotation angle by x-axis.")
             ("beta,b", po::value<double>()->default_value(0.0), "rotation angle by y-axis.")
             ("gamma,g", po::value<double>()->default_value(0.0), "rotation angle by z-axis.")
-            ("sampling,s", po::value<int>()->default_value(100), "sampling data.");
+            ("sampling,s", po::value<int>()->default_value(100), "sampling data.")
+            ("resolution,r", po::value<int>()->default_value(100000), "ecomposition parameter resolution.")
+            ("depth,d", po::value<int>()->default_value(20), "decomposition parameter depth.")
+            ("minVolumePerCH,m", po::value<double>()->default_value(0.0001), "decomposition parameter minVolumePerCH.");
 
     bool parseOK=true;
     po::variables_map vm;
@@ -50,17 +53,20 @@ int main(int argc, char** argv)
                     << general_opt << "\n";
         return 0;
     }
-    bool paramTransf=vm.count("tx") && vm.count("ty") && vm.count("tz") && vm.count("alpha") && vm.count("beta") && vm.count("gramma");
+    //bool paramTransf=vm.count("tx") && vm.count("ty") && vm.count("tz") && vm.count("alpha") && vm.count("beta") && vm.count("gramma");
     double a=0.0, b=0.0, c=0.0, alpha = 0.0, beta=0.0, gamma=0.0;
-    if (paramTransf) {
+    //if (paramTransf) {
         a=vm["tx"].as<double>();
         b=vm["ty"].as<double>();
         c=vm["tz"].as<double>();
         alpha=vm["alpha"].as<double>();
         beta=vm["beta"].as<double>();
         gamma=vm["gamma"].as<double>();
-    }
+    //}
     int sampling=vm["sampling"].as<int>();
+    int resolution=vm["resolution"].as<int>();
+    int depth=vm["depth"].as<int>();
+    double minVolumePerCH=vm["minVolumePerCH"].as<double>();
     string dir=vm["dir"].as<string>();
     string inputFile=vm["input"].as<string>();
     string outputFile=vm["output"].as<string>();
@@ -76,7 +82,7 @@ int main(int argc, char** argv)
     char filename[FILENAMESIZE];
     sprintf(filename,"%s-acd.obj",infile.c_str());
     //--input ../data/bunny.obj --output ../data/bunny-acd.obj --log log.txt
-    sprintf(instruction,"%sdecomposeShapeAcd3d --input %s --output %s --log log.txt",dir.c_str(),inputFile.c_str(),filename);
+    sprintf(instruction,"%sdecomposeShapeAcd3d --input %s --output %s --log log.txt --resolution %d --depth %d --minVolumePerCH %f",dir.c_str(),inputFile.c_str(),filename,resolution,depth,minVolumePerCH);
     system(instruction);
     ifstream inFile;
     sprintf(filename,"%s-acd.txt",infile.c_str());
