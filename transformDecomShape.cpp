@@ -138,7 +138,7 @@ int main(int argc, char** argv)
     board.saveOBJ(filename);
     board.clear();
     //Digitization
-    board << SetMode3D("PointVector", "Both");
+    board << SetMode3D("PointVector", "Paving");//<< SetMode3D(domain.className(), "Both")
     for(int id=0; id<nbFile; id++) {
         board << CustomColors3D(hueMap(id),hueMap(id));
         for(size_t it=0; it<vecConvexShape.at(id).size(); it++)
@@ -187,7 +187,7 @@ int main(int argc, char** argv)
     /****** Transformed convex shape ******/
 
     /******* Write to sdp then obj file ******/
-    board << SetMode3D("PointVector", "Both");//<< SetMode3D(domain.className(), "Paving")
+    board << SetMode3D("PointVector", "Paving");//<< SetMode3D(domain.className(), "Both")
     for(int id=0; id<nbFile; id++) {
         board << CustomColors3D(hueMap(id),hueMap(id));
         for(size_t it=0; it<tvecConvexShape.at(id).size(); it++)
