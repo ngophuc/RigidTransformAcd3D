@@ -53,7 +53,7 @@ int main(int argc, char** argv)
                     << general_opt << "\n";
         return 0;
     }
-    //bool paramTransf=vm.count("tx") && vm.count("ty") && vm.count("tz") && vm.count("alpha") && vm.count("beta") && vm.count("gramma");
+    //bool paramTransf=vm.count("tx") || vm.count("ty") || vm.count("tz") || vm.count("alpha") || vm.count("beta") || vm.count("gramma");
     double a=0.0, b=0.0, c=0.0, alpha = 0.0, beta=0.0, gamma=0.0;
     //if (paramTransf) {
         a=vm["tx"].as<double>();

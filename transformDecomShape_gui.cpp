@@ -16,10 +16,6 @@ using namespace std;
 vector<Point3D> generateConvexShape(const vector<Point3D>& vecPoints, vector<HalfPlane>& vecHP, std::vector<Point3D> &vecVertices, std::vector<Point3D> &vecFacets, bool isVerbose=false);
 vector<vector<Point3D> > generateConvexShape(const vector<vector<Point3D> >& vecPoints, vector<vector<HalfPlane> > &vHP, vector<vector<Point3D> > &vVertices, vector<vector<Point3D> > &vFacets, bool isVerbose);
 
-bool saveObj=false;
-bool showMesh=true;
-bool showVoxel=false;
-
 int main(int argc, char** argv)
 {
     /********** Parameters ********/
@@ -53,16 +49,16 @@ int main(int argc, char** argv)
                     << general_opt << "\n";
         return 0;
     }
-    bool paramTransf=vm.count("tx") && vm.count("ty") && vm.count("tz") && vm.count("alpha") && vm.count("beta") && vm.count("gramma");
+    //bool paramTransf=vm.count("tx") || vm.count("ty") || vm.count("tz") || vm.count("alpha") || vm.count("beta") || vm.count("gramma");
     double a=0.0, b=0.0, c=0.0, alpha = 0.0, beta=0.0, gamma=0.0;
-    if (paramTransf) {
+    //if (paramTransf) {
         a=vm["tx"].as<double>();
         b=vm["ty"].as<double>();
         c=vm["tz"].as<double>();
         alpha=vm["alpha"].as<double>();
         beta=vm["beta"].as<double>();
         gamma=vm["gamma"].as<double>();
-    }
+    //}
     int sampling=vm["sampling"].as<int>();
     string dir=vm["dir"].as<string>();
     string inputFile=vm["input"].as<string>();
