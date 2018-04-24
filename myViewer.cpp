@@ -12,54 +12,48 @@ using namespace std;
 
 /******* Write to sdp and obj file ******/
 void myViewer::saveObjet() {
-    //Find bounding box of convex shape
-    int nbFile=vecConvexShape.size();
-    BoundingBox BB;
-    Point3D pmin, pmax;
-    vector<Point3D> pBB;
-    for(int id=0; id<nbFile; id++) {
-        BB=findBoundingBox(vecConvexShape.at(id));
-        pmin=BB.getPointMin();
-        pmax=BB.getPointMax();
-        pBB.push_back(pmin);
-        pBB.push_back(pmax);
-    }
-    BB=findBoundingBox(pBB);
-    pmin=BB.getPointMin();
-    pmax=BB.getPointMax()-pmin;
-
     char filename[FILENAMESIZE];
-    sprintf(filename,"%s.sdp",file.c_str());
-    ofstream myfile (filename);
-    if (myfile.is_open()) {
-        myfile <<"# sdp file generate from convex decomposition"<<endl;
-        myfile <<"# format: x y z"<<endl;
-        for(int id=0; id<nbFile; id++) {
+    if(showVoxels) {
+        HueShadeColorMap<double> hueMap(0.0,vecConvexShape.size());
+        Board3D<> board;
+        board << SetMode3D("PointVector", "Paving");//Both
+        for(int id=0; id<vecConvexShape.size(); id++) {
+            board << CustomColors3D(hueMap(id),hueMap(id));
             for(size_t it=0; it<vecConvexShape.at(id).size(); it++)
-                myfile << vecConvexShape.at(id).at(it)[0]-pmin[0]
-                        <<" "<<vecConvexShape.at(id).at(it)[1]-pmin[1]
-                        <<" "<<vecConvexShape.at(id).at(it)[2]-pmin[2]<<endl;
+                board << vecConvexShape.at(id).at(it);
         }
-        myfile.close();
+        sprintf(filename,"%s.obj",file.c_str());
+        board.saveOBJ(filename);
         cout<<"Save to "<<filename<<endl;
+        board.clear();
     }
     else {
-        cout << "Unable to open file"<<filename;
-        exit(-1);
+        sprintf(filename,"%s.sdp",file.c_str());
+        ofstream myfile (filename);
+        if (myfile.is_open()) {
+            myfile <<"# sdp file generate from convex decomposition"<<endl;
+            myfile <<"# point format: x y z"<<endl;
+            for(int id=0; id<vecVertices.size(); id++) {
+                for(size_t it=0; it<vecVertices.at(id).size(); it++)
+                    myfile << vecVertices.at(id).at(it)[0]
+                            <<" "<<vecVertices.at(id).at(it)[1]
+                            <<" "<<vecVertices.at(id).at(it)[2]<<endl;
+            }
+            myfile <<"# triangle format: index_point1 index_point2 index_point3"<<endl;
+            for(int id=0; id<vecFacets.size(); id++) {
+                for(size_t it=0; it<vecFacets.at(id).size(); it++)
+                    myfile << vecFacets.at(id).at(it)[0]
+                            <<" "<<vecFacets.at(id).at(it)[1]
+                            <<" "<<vecFacets.at(id).at(it)[2]<<endl;
+            }
+            myfile.close();
+            cout<<"Save to "<<filename<<endl;
+        }
+        else {
+            cout << "Unable to open file"<<filename;
+            exit(-1);
+        }
     }
-    HueShadeColorMap<double> hueMap(0.0,vecConvexShape.size());
-    Board3D<> board;
-    board << SetMode3D("PointVector", "Paving");//Both
-    for(int id=0; id<nbFile; id++) {
-        board << CustomColors3D(hueMap(id),hueMap(id));
-        for(size_t it=0; it<vecConvexShape.at(id).size(); it++)
-            board << vecConvexShape.at(id).at(it);
-    }
-    sprintf(filename,"%s.obj",file.c_str());
-    cout<<"Save to "<<filename<<endl;
-    board.saveOBJ(filename);
-    cout<<"Save to "<<filename<<endl;;
-    board.clear();
 }
 /******* Write to sdp and obj file ******/
 

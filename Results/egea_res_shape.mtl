@@ -1,0 +1,23 @@
+#  MTL format
+# generated from Board3D from the DGtal library
+newmtl Mat_0
+Ka 1 0.0980392 0.0980392
+Kd 1 0.0980392 0.0980392
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_1
+Ka 0.0980392 1 0.0980392
+Kd 0.0980392 1 0.0980392
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_2
+Ka 0.0980392 0.0980392 1
+Kd 0.0980392 0.0980392 1
+Ks 0 0 0
+d 1
+illum 2
+

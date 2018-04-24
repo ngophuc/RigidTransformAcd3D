@@ -27,11 +27,14 @@ int main(int argc, char** argv)
             ("dir,d", po::value<std::string>()->default_value("./"), "execute dir (default ./).")
             ("tx,x", po::value<double>()->default_value(0.0), "x-translation.")
             ("ty,y", po::value<double>()->default_value(0.0), "y-translation.")
-            ("tz,z", po::value<double>()->default_value(0.0), "y-translation.")
+            ("tz,z", po::value<double>()->default_value(0.0), "z-translation.")
             ("alpha,a", po::value<double>()->default_value(0.0), "rotation angle by x-axis.")
             ("beta,b", po::value<double>()->default_value(0.0), "rotation angle by y-axis.")
             ("gamma,g", po::value<double>()->default_value(0.0), "rotation angle by z-axis.")
-            ("sampling,s", po::value<int>()->default_value(100), "sampling data.");
+            ("scale,s", po::value<int>()->default_value(100), "scale data.")
+            ("resolution,r", po::value<int>()->default_value(100000), "decomposition parameter resolution.")
+            ("depth", po::value<int>()->default_value(20), "decomposition parameter depth.")
+            ("minVolumePerCH,m", po::value<double>()->default_value(0.0001), "decomposition parameter minVolumePerCH.");
 
     bool parseOK=true;
     po::variables_map vm;
@@ -60,6 +63,9 @@ int main(int argc, char** argv)
         gamma=vm["gamma"].as<double>();
     //}
     int sampling=vm["sampling"].as<int>();
+    int resolution=vm["resolution"].as<int>();
+    int depth=vm["depth"].as<int>();
+    double minVolumePerCH=vm["minVolumePerCH"].as<double>();
     string dir=vm["dir"].as<string>();
     string inputFile=vm["input"].as<string>();
     string outputFile=vm["output"].as<string>();
@@ -75,7 +81,7 @@ int main(int argc, char** argv)
     char filename[FILENAMESIZE];
     sprintf(filename,"%s-acd.obj",infile.c_str());
     //--input ../data/bunny.obj --output ../data/bunny-acd.obj --log log.txt
-    sprintf(instruction,"%sdecomposeShapeAcd3d --input %s --output %s --log log.txt",dir.c_str(),inputFile.c_str(),filename);
+    sprintf(instruction,"%sdecomposeShapeAcd3d --input %s --output %s --log log.txt --resolution %d --depth %d --minVolumePerCH %f",dir.c_str(),inputFile.c_str(),filename,resolution,depth,minVolumePerCH);
     system(instruction);
     ifstream inFile;
     sprintf(filename,"%s-acd.txt",infile.c_str());
@@ -152,6 +158,15 @@ int main(int argc, char** argv)
     }
     /****** Transformed convex shape ******/
 
+    /******* Remove temporay files ******/
+    sprintf(filename,"rm %s-acd.txt",infile.c_str());
+    system(filename);
+    for (int idFile=0; idFile<nbFile; idFile++) {
+        sprintf(filename,"rm %s-acd_%d.dat",infile.c_str(),idFile);
+        system(filename);
+    }
+    /******* Remove temporay files ******/
+
     /******* Visualisation *******/
     QApplication application(argc,argv);
     //Decomposition
@@ -159,7 +174,7 @@ int main(int argc, char** argv)
     myViewer viewer(s,false,vecFacets, vecVertices,vecConvexShape);
     viewer.show();
     viewer.setWindowTitle("Convex decomposition");
-    viewer.setBackgroundColor(QColor(255, 255, 255, 0));
+    //viewer.setBackgroundColor(QColor(255, 255, 255, 0));
     if(viewer.getShowVoxels())
         viewer.drawVoxel();
     else
@@ -169,7 +184,7 @@ int main(int argc, char** argv)
     myViewer viewer1(s,true,vecFacets, vecVertices,vecConvexShape);
     viewer1.show();
     viewer1.setWindowTitle("Digitized decomposition");
-    viewer1.setBackgroundColor(QColor(255, 255, 255, 0));
+    //viewer1.setBackgroundColor(QColor(255, 255, 255, 0));
     if(viewer1.getShowVoxels())
         viewer1.drawVoxel();
     else
@@ -180,7 +195,9 @@ int main(int argc, char** argv)
     myViewer viewer2(s,true,tvecFacets, tvecVertices,tvecConvexShape);
     viewer2.show();
     viewer2.setWindowTitle("Transformed objet");
-    viewer2.setBackgroundColor(QColor(255, 255, 255, 0));
+    //viewer2.setBackgroundColor(QColor(255, 255, 255, 0));
+    //viewer2.setTextIsEnabled();
+    //viewer2.drawText(100,100,"test");
     if(viewer2.getShowVoxels())
         viewer2.drawVoxel();
     else
