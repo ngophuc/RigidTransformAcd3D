@@ -169,12 +169,12 @@ Allowed options are:
 		</td>	
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/drum_res_decomp.sdp">
-				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_decomp.jpg" alt="Convex decomposition" />
+				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/drum_res_decomp.jpg" alt="Convex decomposition" />
 			</a>
 		</td>	
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/drum_res_shape.obj">
-				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_shape.jpg" alt="Digitized decomposition" />
+				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/drum_res_shape.jpg" alt="Digitized decomposition" />
 			</a>
 		</td>
     		<td align="center" valign="center">
