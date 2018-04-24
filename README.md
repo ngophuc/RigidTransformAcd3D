@@ -115,3 +115,41 @@ Allowed options are:
 		</tr>
 	</table>
 </p>
+
+<p>File <a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/Hand1.obj">Hand1.obj</a>: </p>&#x000A;&#x000A;
+<pre class="code highlight js-syntax-highlight plaintext">
+<code>./transformDecomShape3d -i ../Samples/Hand1.obj -o ../Results/Hand1_res.obj 
+--resolution 100000 -s 1 -x 0.1 -y 0.5 -z 1 -a 0.3 -b 0.7 -g 0.1</code>
+</pre>&#x000A;&#x000A;
+<p>
+	<table cellpadding="5">
+		<tr>
+		<td align="center" valign="center">
+			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/Hand1.obj">
+				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/Hand1.jpg" alt="Input image" />
+			</a>	
+		</td>	
+		<td align="center" valign="center">
+			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_decomp.sdp">
+				<img width="250" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_decomp.jpg" alt="Convex decomposition" />
+			</a>
+		</td>	
+		<td align="center" valign="center">
+			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_shape.obj">
+				<img width="250" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_shape.jpg" alt="Digitized decomposition" />
+			</a>
+		</td>
+    		<td align="center" valign="center">
+			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_tshape.obj">
+				<img width="250" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_tshape.jpg" alt="Transformed result" />
+			</a>
+		</td>  
+		</tr>
+		<tr>
+			<td align="center" valign="center">  Input image </td>
+			<td align="center" valign="center">  Convex decomposition </td>
+			<td align="center" valign="center">  Digitized decomposition </td>
+			<td align="center" valign="center">  Transformed result </td>
+		</tr>
+	</table>
+</p>
