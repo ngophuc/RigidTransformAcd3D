@@ -63,7 +63,7 @@ int main(int argc, char** argv)
         beta=vm["beta"].as<double>();
         gamma=vm["gamma"].as<double>();
     //}
-    int sampling=vm["sampling"].as<int>();
+    int sampling=vm["scale"].as<int>();
     int resolution=vm["resolution"].as<int>();
     int depth=vm["depth"].as<int>();
     double minVolumePerCH=vm["minVolumePerCH"].as<double>();
