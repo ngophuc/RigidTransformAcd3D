@@ -119,7 +119,7 @@ Allowed options are:
 <p>File <a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/Hand1.obj">Hand1.obj</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
 <code>./transformDecomShape3d -i ../Samples/Hand1.obj -o ../Results/Hand1_res.obj 
---resolution 100000 -s 1 -x 0.1 -y 0.5 -z 1 -a 0.3 -b 0.7 -g 0.1</code>
+--resolution 90000 --depth 10 -s 0.5 -x 0.1 -y 0.5 -z 1 -a 0.3 -b 0.7 -g 0.1</code>
 </pre>&#x000A;&#x000A;
 <p>
 	<table cellpadding="5">
@@ -142,6 +142,44 @@ Allowed options are:
     		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_tshape.obj">
 				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_tshape.jpg" alt="Transformed result" />
+			</a>
+		</td>  
+		</tr>
+		<tr>
+			<td align="center" valign="center">  Input image </td>
+			<td align="center" valign="center">  Convex decomposition </td>
+			<td align="center" valign="center">  Digitized decomposition </td>
+			<td align="center" valign="center">  Transformed result </td>
+		</tr>
+	</table>
+</p>
+
+<p>File <a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/drum.obj">drum.obj</a>: </p>&#x000A;&#x000A;
+<pre class="code highlight js-syntax-highlight plaintext">
+<code>./transformDecomShape3d -i ../Samples/drum.obj -o ../Results/drum_res.obj 
+--resolution 500000 --depth 40 -s 20 -x 0.1 -y 0.5 -z 1 -a 0.3</code>
+</pre>&#x000A;&#x000A;
+<p>
+	<table cellpadding="5">
+		<tr>
+		<td align="center" valign="center">
+			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/drum.obj">
+				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/drum.jpg" alt="Input image" />
+			</a>	
+		</td>	
+		<td align="center" valign="center">
+			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/drum_res_decomp.sdp">
+				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_decomp.jpg" alt="Convex decomposition" />
+			</a>
+		</td>	
+		<td align="center" valign="center">
+			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/drum_res_shape.obj">
+				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_shape.jpg" alt="Digitized decomposition" />
+			</a>
+		</td>
+    		<td align="center" valign="center">
+			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/drum_res_tshape.obj">
+				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/drum_res_tshape.jpg" alt="Transformed result" />
 			</a>
 		</td>  
 		</tr>
