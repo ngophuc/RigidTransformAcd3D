@@ -15,21 +15,27 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/DecompConvexRigidMotion/
 Allowed options are: 
 <table align="right">
   <tr>
-    <th>-h [ --help ]</th>
+    <th align=Left>-h [ --help ]</th>
     <th>display this message.</th>
   </tr>
   <tr>
-    <td>-i [ --input ] arg</td>
-    <td>input filename. <br></td>
+    <td align=Left>-i [ --input ] arg</td>
+    <td align=Left>input filename.</td>
   </tr>
   <tr>
-    <td>-o [ --output ] arg (=./) </td>
-    <td>output dir (default ./).</td>
+    <td align=Left>-o [ --output ] arg (=./) </td>
+    <td align=Left>output dir (default ./).</td>
   </tr>
+  <tr>
+    <td align=Left>-d [ --dir ] arg (=./) </td>
+    <td align=Left> execute dir (default ./).</td>
+  </tr>
+  <tr>
+    <td align=Left>-x [ --tx ] arg (=0) </td>
+    <td align=Left>x-translation.</td>
+  </tr>	
 </table>
 
-  -d [ --dir ] arg (=./)                execute dir (default ./).<br>
-  -x [ --tx ] arg (=0)                  x-translation.<br>
   -y [ --ty ] arg (=0)                  y-translation.<br>
   -z [ --tz ] arg (=0)                  y-translation.<br>
   -a [ --alpha ] arg (=0)               rotation angle by x-axis.<br>
