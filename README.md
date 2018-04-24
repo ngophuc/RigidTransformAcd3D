@@ -78,7 +78,7 @@ Allowed options are:
 
 # Examples
 
-<p>File <a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/flower.pgm">flower.pgm</a>: </p>&#x000A;&#x000A;
+<p>File <a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/egea.obj">egea.obj</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
 <code>./transformDecomShape3d -i ../Samples/egea.obj -o ../Results/egea_res.obj --resolution 1000000 
 --depth 30 --minVolumePerCH 0.0 -x 0.1 -y 0.5 -z 1 -a 0.3 -b 0.7 -g 0.1</code>
@@ -88,22 +88,22 @@ Allowed options are:
 		<tr>
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/egea.obj">
-				<img width="120" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/egea.png" alt="Input image" />
+				<img width="120" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/egea.jpg" alt="Input image" />
 			</a>	
 		</td>	
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_decomp.sdp">
-				<img width="120" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_decomp.png" alt="Convex decomposition" />
+				<img width="120" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_decomp.jpg" alt="Convex decomposition" />
 			</a>
 		</td>	
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_shape.obj">
-				<img width="120" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_shape.png" alt="Digitized decomposition" />
+				<img width="120" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_shape.jpg" alt="Digitized decomposition" />
 			</a>
 		</td>
     		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_tshape.obj">
-				<img width="120" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_tshape.png" alt="Transformed result" />
+				<img width="120" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_tshape.jpg" alt="Transformed result" />
 			</a>
 		</td>  
 		</tr>
