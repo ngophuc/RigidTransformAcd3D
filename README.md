@@ -16,7 +16,7 @@ Allowed options are:
 <table align="right">
   <tr>
     <th align=Left>Options</th>
-    <th>Description</th>
+    <th align=Left>Description</th>
   </tr>
   <tr>
     <td align=Left>-h [ --help ]</th>
