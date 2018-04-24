@@ -32,7 +32,7 @@ int main(int argc, char** argv)
             ("alpha,a", po::value<double>()->default_value(0.0), "rotation angle by x-axis.")
             ("beta,b", po::value<double>()->default_value(0.0), "rotation angle by y-axis.")
             ("gamma,g", po::value<double>()->default_value(0.0), "rotation angle by z-axis.")
-            ("scale,s", po::value<int>()->default_value(100), "scale data.")
+            ("scale,s", po::value<double>()->default_value(100), "scale data.")
             ("resolution,r", po::value<int>()->default_value(100000), "decomposition parameter resolution.")
             ("depth", po::value<int>()->default_value(20), "decomposition parameter depth.")
             ("minVolumePerCH,m", po::value<double>()->default_value(0.0001), "decomposition parameter minVolumePerCH.");
@@ -63,7 +63,7 @@ int main(int argc, char** argv)
         beta=vm["beta"].as<double>();
         gamma=vm["gamma"].as<double>();
     //}
-    int sampling=vm["scale"].as<int>();
+    double sampling=vm["scale"].as<double>();
     int resolution=vm["resolution"].as<int>();
     int depth=vm["depth"].as<int>();
     double minVolumePerCH=vm["minVolumePerCH"].as<double>();
