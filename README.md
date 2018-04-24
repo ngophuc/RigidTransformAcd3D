@@ -13,20 +13,20 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/DecompConvexRigidMotion/
 # Program parameters
 
 Allowed options are: 
-  -h [ --help ]                         display this message
-  -i [ --input ] arg                    input filename.
-  -o [ --output ] arg (=./)             output dir (default ./).
-  -d [ --dir ] arg (=./)                execute dir (default ./).
-  -x [ --tx ] arg (=0)                  x-translation.
-  -y [ --ty ] arg (=0)                  y-translation.
-  -z [ --tz ] arg (=0)                  y-translation.
-  -a [ --alpha ] arg (=0)               rotation angle by x-axis.
-  -b [ --beta ] arg (=0)                rotation angle by y-axis.
-  -g [ --gamma ] arg (=0)               rotation angle by z-axis.
-  -s [ --sampling ] arg (=100)          sampling data.
-  -r [ --resolution ] arg (=100000)     ecomposition parameter resolution.
-  --depth arg (=20)                     decomposition parameter depth.
-  -m [ --minVolumePerCH ] arg (=0.0001) decomposition parameter minVolumePerCH.
+  -h [ --help ]                         display this message. <br>
+  -i [ --input ] arg                    input filename. <br>
+  -o [ --output ] arg (=./)             output dir (default ./).<br>
+  -d [ --dir ] arg (=./)                execute dir (default ./).<br>
+  -x [ --tx ] arg (=0)                  x-translation.<br>
+  -y [ --ty ] arg (=0)                  y-translation.<br>
+  -z [ --tz ] arg (=0)                  y-translation.<br>
+  -a [ --alpha ] arg (=0)               rotation angle by x-axis.<br>
+  -b [ --beta ] arg (=0)                rotation angle by y-axis.<br>
+  -g [ --gamma ] arg (=0)               rotation angle by z-axis.<br>
+  -s [ --scale ] arg (=100)          	scale data.<br>
+  -r [ --resolution ] arg (=100000)     decomposition parameter resolution.<br>
+  --depth arg (=20)                     decomposition parameter depth.<br>
+  -m [ --minVolumePerCH ] arg (=0.0001) decomposition parameter minVolumePerCH.<br>
 
 # Examples
 
