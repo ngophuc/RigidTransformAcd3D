@@ -93,17 +93,17 @@ Allowed options are:
 		</td>	
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_decomp.sdp">
-				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_decomp.jpg" alt="Convex decomposition" />
+				<img width="250" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_decomp.jpg" alt="Convex decomposition" />
 			</a>
 		</td>	
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_shape.obj">
-				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_shape.jpg" alt="Digitized decomposition" />
+				<img width="250" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_shape.jpg" alt="Digitized decomposition" />
 			</a>
 		</td>
     		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_tshape.obj">
-				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_tshape.jpg" alt="Transformed result" />
+				<img width="250" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/egea_res_tshape.jpg" alt="Transformed result" />
 			</a>
 		</td>  
 		</tr>
