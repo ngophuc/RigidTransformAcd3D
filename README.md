@@ -126,22 +126,22 @@ Allowed options are:
 		<tr>
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/Hand1.obj">
-				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/Hand1.jpg" alt="Input image" />
+				<img width="150" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/Hand1.jpg" alt="Input image" />
 			</a>	
 		</td>	
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_decomp.sdp">
-				<img width="250" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_decomp.jpg" alt="Convex decomposition" />
+				<img width="150" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_decomp.jpg" alt="Convex decomposition" />
 			</a>
 		</td>	
 		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_shape.obj">
-				<img width="250" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_shape.jpg" alt="Digitized decomposition" />
+				<img width="150" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_shape.jpg" alt="Digitized decomposition" />
 			</a>
 		</td>
     		<td align="center" valign="center">
 			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_tshape.obj">
-				<img width="250" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_tshape.jpg" alt="Transformed result" />
+				<img width="150" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/Hand1_res_tshape.jpg" alt="Transformed result" />
 			</a>
 		</td>  
 		</tr>
