@@ -13,9 +13,21 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/DecompConvexRigidMotion/
 # Program parameters
 
 Allowed options are: 
-  -h [ --help ]                         display this message. <br>
-  -i [ --input ] arg                    input filename. <br>
-  -o [ --output ] arg (=./)             output dir (default ./).<br>
+<table align="right">
+  <tr>
+    <th>-h [ --help ]</th>
+    <th>display this message.</th>
+  </tr>
+  <tr>
+    <td>-i [ --input ] arg</td>
+    <td>input filename. <br></td>
+  </tr>
+  <tr>
+    <td>-o [ --output ] arg (=./) </td>
+    <td>output dir (default ./).</td>
+  </tr>
+</table>
+
   -d [ --dir ] arg (=./)                execute dir (default ./).<br>
   -x [ --tx ] arg (=0)                  x-translation.<br>
   -y [ --ty ] arg (=0)                  y-translation.<br>
