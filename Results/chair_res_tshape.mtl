@@ -1,0 +1,121 @@
+#  MTL format
+# generated from Board3D from the DGtal library
+newmtl Mat_0
+Ka 1 0.0980392 0.0980392
+Kd 1 0.0980392 0.0980392
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_1
+Ka 1 0.415686 0.0980392
+Kd 1 0.415686 0.0980392
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_2
+Ka 1 0.733333 0.0980392
+Kd 1 0.733333 0.0980392
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_3
+Ka 0.945098 1 0.0980392
+Kd 0.945098 1 0.0980392
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_4
+Ka 0.627451 1 0.0980392
+Kd 0.627451 1 0.0980392
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_5
+Ka 0.309804 1 0.0980392
+Kd 0.309804 1 0.0980392
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_6
+Ka 0.0980392 1 0.203922
+Kd 0.0980392 1 0.203922
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_7
+Ka 0.0980392 1 0.521569
+Kd 0.0980392 1 0.521569
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_8
+Ka 0.0980392 1 0.839216
+Kd 0.0980392 1 0.839216
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_9
+Ka 0.0980392 0.839216 1
+Kd 0.0980392 0.839216 1
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_10
+Ka 0.0980392 0.521569 1
+Kd 0.0980392 0.521569 1
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_11
+Ka 0.0980392 0.203922 1
+Kd 0.0980392 0.203922 1
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_12
+Ka 0.309804 0.0980392 1
+Kd 0.309804 0.0980392 1
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_13
+Ka 0.627451 0.0980392 1
+Kd 0.627451 0.0980392 1
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_14
+Ka 0.945098 0.0980392 1
+Kd 0.945098 0.0980392 1
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_15
+Ka 1 0.0980392 0.733333
+Kd 1 0.0980392 0.733333
+Ks 0 0 0
+d 1
+illum 2
+
+newmtl Mat_16
+Ka 1 0.0980392 0.415686
+Kd 1 0.0980392 0.415686
+Ks 0 0 0
+d 1
+illum 2
+
