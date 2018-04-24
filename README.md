@@ -191,3 +191,41 @@ Allowed options are:
 		</tr>
 	</table>
 </p>
+
+<p>File <a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/chair.obj">chair.obj</a>: </p>&#x000A;&#x000A;
+<pre class="code highlight js-syntax-highlight plaintext">
+<code>./transformDecomShape3d -i ../Samples/chair.obj -o ../Results/chair_res.obj 
+--resolution 500000 --depth 40 -s 20 -x 0.1 -y 0.5 -z 1 -a 0.3</code>
+</pre>&#x000A;&#x000A;
+<p>
+	<table cellpadding="5">
+		<tr>
+		<td align="center" valign="center">
+			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/chair.obj">
+				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/chair.jpg" alt="Input image" />
+			</a>	
+		</td>	
+		<td align="center" valign="center">
+			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/chair_res_decomp.sdp">
+				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/chair_res_decomp.jpg" alt="Convex decomposition" />
+			</a>
+		</td>	
+		<td align="center" valign="center">
+			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/chair_res_shape.obj">
+				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/chair_res_shape.jpg" alt="Digitized decomposition" />
+			</a>
+		</td>
+    		<td align="center" valign="center">
+			<a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/chair_res_tshape.obj">
+				<img width="200" src="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Results/chair_res_tshape.jpg" alt="Transformed result" />
+			</a>
+		</td>  
+		</tr>
+		<tr>
+			<td align="center" valign="center">  Input image </td>
+			<td align="center" valign="center">  Convex decomposition </td>
+			<td align="center" valign="center">  Digitized decomposition </td>
+			<td align="center" valign="center">  Transformed result </td>
+		</tr>
+	</table>
+</p>
