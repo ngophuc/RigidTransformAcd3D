@@ -45,7 +45,7 @@ if ( Boost_FOUND )
 endif( Boost_FOUND)
 
 add_definitions(-g)
-#add_definitions(-DWITH_VISU3D_QGLVIEWER -DWITH_QT5)
+add_definitions(-DWITH_VISU3D_QGLVIEWER -DWITH_QT5)
 
 add_executable(decomposeShapeAcd3d acd3d_main.cpp oclHelper.cpp oclHelper.h ${SOURCES})
 target_link_libraries(decomposeShapeAcd3d)
@@ -53,5 +53,5 @@ target_link_libraries(decomposeShapeAcd3d)
 add_executable(transformDecomShape3d transformDecomShape.cpp Halfplane.cpp Halfplane.h Boundingbox.cpp Boundingbox.h Utility.cpp Utility.h)
 target_link_libraries(transformDecomShape3d ${DGTAL_LIBRARIES} ${DGtalToolsLibDependencies} ${CGAL_LIBRARIES} ${CGAL_3RD_PARTY_LIBRARIES})
 
-#add_executable(transformDecomShape3d_gui transformDecomShape_gui.cpp Halfplane.cpp Halfplane.h Boundingbox.cpp Boundingbox.h Utility.cpp Utility.h)
-#target_link_libraries(transformDecomShape3d_gui ${DGTAL_LIBRARIES} ${DGtalToolsLibDependencies} ${CGAL_LIBRARIES} ${CGAL_3RD_PARTY_LIBRARIES})
+add_executable(transformDecomShape3d_gui transformDecomShape_gui.cpp Halfplane.cpp Halfplane.h Boundingbox.cpp Boundingbox.h Utility.cpp Utility.h myViewer.h myViewer.cpp)
+target_link_libraries(transformDecomShape3d_gui ${DGTAL_LIBRARIES} ${DGtalToolsLibDependencies} ${CGAL_LIBRARIES} ${CGAL_3RD_PARTY_LIBRARIES})
