@@ -59,10 +59,6 @@ Allowed options are:
     <td align=Left>rotation angle by z-axis.</td>
   </tr>	  
   <tr>
-    <td align=Left>-z [ --tz ] arg (=0)</td>
-    <td align=Left>z-translation.</td>
-  </tr>
-  <tr>
     <td align=Left>-s [ --scale ] arg (=100)   </td>
     <td align=Left>scale data.</td>
   </tr>
