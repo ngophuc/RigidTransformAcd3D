@@ -10,11 +10,30 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/DecompConvexRigidMotion/
 
 * [![Build Status](https://travis-ci.org/ngophuc/RigidTransformAcd3D.svg?branch=master)](https://travis-ci.org/ngophuc/RigidTransformAcd3D)
 
+# Program parameters
+
+Allowed options are: 
+  -h [ --help ]                         display this message
+  -i [ --input ] arg                    input filename.
+  -o [ --output ] arg (=./)             output dir (default ./).
+  -d [ --dir ] arg (=./)                execute dir (default ./).
+  -x [ --tx ] arg (=0)                  x-translation.
+  -y [ --ty ] arg (=0)                  y-translation.
+  -z [ --tz ] arg (=0)                  y-translation.
+  -a [ --alpha ] arg (=0)               rotation angle by x-axis.
+  -b [ --beta ] arg (=0)                rotation angle by y-axis.
+  -g [ --gamma ] arg (=0)               rotation angle by z-axis.
+  -s [ --sampling ] arg (=100)          sampling data.
+  -r [ --resolution ] arg (=100000)     ecomposition parameter resolution.
+  --depth arg (=20)                     decomposition parameter depth.
+  -m [ --minVolumePerCH ] arg (=0.0001) decomposition parameter minVolumePerCH.
+
 # Examples
 
 <p>File <a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/flower.pgm">flower.pgm</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
-<code>./transformDecomShape3d -i ../Samples/flower.pgm -o ../Results/flower_result.pgm -e -a 0.2 -b 0.1 -t 0.8</code>
+<code>./transformDecomShape3d -i ../Samples/egea.obj -o ../Results/egea_res.obj --resolution 1000000 --depth 30 --minVolumePerCH 0.0
+-x 0.1 -y 0.5 -z 1 -a 0.3 -b 0.7 -g 0.1</code>
 </pre>&#x000A;&#x000A;
 <p>
 	<table cellpadding="5">
