@@ -15,9 +15,13 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/DecompConvexRigidMotion/
 Allowed options are: 
 <table align="right">
   <tr>
-    <th align=Left>-h [ --help ]</th>
-    <th>display this message.</th>
+    <th align=Left>Options</th>
+    <th>Description</th>
   </tr>
+  <tr>
+    <td align=Left>-h [ --help ]</th>
+    <td>display this message.</th>
+  </tr>	
   <tr>
     <td align=Left>-i [ --input ] arg</td>
     <td align=Left>input filename.</td>
@@ -34,17 +38,47 @@ Allowed options are:
     <td align=Left>-x [ --tx ] arg (=0) </td>
     <td align=Left>x-translation.</td>
   </tr>	
+  <tr>
+    <td align=Left>-y [ --ty ] arg (=0)</th>
+    <td>y-translation.</th>
+  </tr>	
+  <tr>
+    <td align=Left>-z [ --tz ] arg (=0)</td>
+    <td align=Left>z-translation.</td>
+  </tr>
+  <tr>
+    <td align=Left>-a [ --alpha ] arg (=0)  </td>
+    <td align=Left>rotation angle by x-axis.</td>
+  </tr>
+  <tr>
+    <td align=Left>-b [ --beta ] arg (=0) </td>
+    <td align=Left>rotation angle by y-axis.</td>
+  </tr>
+  <tr>
+    <td align=Left>-g [ --gamma ] arg (=0) </td>
+    <td align=Left>rotation angle by z-axis.</td>
+  </tr>	  
+  <tr>
+    <td align=Left>-z [ --tz ] arg (=0)</td>
+    <td align=Left>z-translation.</td>
+  </tr>
+  <tr>
+    <td align=Left>-s [ --scale ] arg (=100)   </td>
+    <td align=Left>scale data.</td>
+  </tr>
+  <tr>
+    <td align=Left>-r [ --resolution ] arg (=100000) </td>
+    <td align=Left>decomposition parameter resolution.</td>
+  </tr>
+  <tr>
+    <td align=Left>--depth arg (=20) </td>
+    <td align=Left>decomposition parameter depth.</td>
+  </tr>	  
+  <tr>
+    <td align=Left>-m [ --minVolumePerCH ] arg (=0.0001) </td>
+    <td align=Left>decomposition parameter minimum volume of convex hull.</td>
+  </tr>	
 </table>
-
-  -y [ --ty ] arg (=0)                  y-translation.<br>
-  -z [ --tz ] arg (=0)                  y-translation.<br>
-  -a [ --alpha ] arg (=0)               rotation angle by x-axis.<br>
-  -b [ --beta ] arg (=0)                rotation angle by y-axis.<br>
-  -g [ --gamma ] arg (=0)               rotation angle by z-axis.<br>
-  -s [ --scale ] arg (=100)          	scale data.<br>
-  -r [ --resolution ] arg (=100000)     decomposition parameter resolution.<br>
-  --depth arg (=20)                     decomposition parameter depth.<br>
-  -m [ --minVolumePerCH ] arg (=0.0001) decomposition parameter minVolumePerCH.<br>
 
 # Examples
 
