@@ -195,7 +195,7 @@ Allowed options are:
 <p>File <a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/chair.obj">chair.obj</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
 <code>./transformDecomShape3d -i ../Samples/chair.obj -o ../Results/chair_res.obj 
---resolution 500000 --depth 40 -s 20 -x 0.1 -y 0.5 -z 1 -a 0.3</code>
+--resolution 500000 --depth 40 -s 100 -x 0.1 -y 0.5 -z 1 -b 0.3 -g 1.34</code>
 </pre>&#x000A;&#x000A;
 <p>
 	<table cellpadding="5">
