@@ -84,7 +84,7 @@ Allowed options are:
 
 <p>File <a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/flower.pgm">flower.pgm</a>: </p>&#x000A;&#x000A;
 <pre class="code highlight js-syntax-highlight plaintext">
-<code>./transformDecomShape3d -i ../Samples/egea.obj -o ../Results/egea_res.obj --resolution 1000000 --depth 30 --minVolumePerCH 0.0
+<code>./transformDecomShape3d -i ../Samples/egea.obj -o ../Results/egea_res.obj --resolution 1000000 &#x000A;--depth 30 --minVolumePerCH 0.0
 -x 0.1 -y 0.5 -z 1 -a 0.3 -b 0.7 -g 0.1</code>
 </pre>&#x000A;&#x000A;
 <p>
