@@ -76,7 +76,7 @@ Allowed options are: <br/>
     <td align=Left>decomposition parameter minimum volume of convex hull.</td>
   </tr>	
 </table>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 # Examples
 
 <p>File <a href="https://github.com/ngophuc/RigidTransformAcd3D/blob/master/Samples/egea.obj">egea.obj</a>: </p>&#x000A;&#x000A;
