@@ -14,7 +14,7 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/DecompConvexRigidMotion/
 
 Allowed options are: <br/>
 
-<table align="right">
+<table align="left">
   <tr>
     <th align=Left>Options</th>
     <th align=Left>Description</th>
