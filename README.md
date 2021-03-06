@@ -12,7 +12,8 @@ http://ipol-geometry.loria.fr/~phuc/ipol_demo/DecompConvexRigidMotion/
 
 # Program parameters
 
-Allowed options are: 
+Allowed options are: <br/>
+
 <table align="right">
   <tr>
     <th align=Left>Options</th>
